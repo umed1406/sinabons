@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прошла эпоха</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url('C:/Users/latip/Desktop/statici.mages/background.image.png');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #f8f8f8;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 800px;
+            margin-top: 50px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            color: #ffd700;
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        #slideshow {
+            max-width: 100%;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        .slide {
+            display: none;
+        }
+        img {
+            width: 60%;
+            max-height: 70vh; /* Ограничение высоты изображений */
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.5s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        #message {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 1.2em;
+            animation: fadeInMessage 3s ease-in-out;
+        }
+        @keyframes fadeInMessage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        #musicPrompt {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #musicPrompt button {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            cursor: pointer;
+            background-color: #ffd700;
+            border: none;
+            border-radius: 10px;
+            color: black;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        #musicPrompt button:hover {
+            background-color: #ffa500;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="musicPrompt">
+        <button onclick="startMusic()">Включить музыку и начать просмотр</button>
+    </div>
+    <div class="container">
+        <h1>Прошла эпоха</h1>
+        <div id="slideshow">
+            <div class="slide"><img src="img1.jpg" alt="Фото 1"></div>
+            <div class="slide"><img src="img2.jpg" alt="Фото 2"></div>
+            <div class="slide"><img src="img3.jpg" alt="Фото 3"></div>
+            <div class="slide"><img src="img4.jpg" alt="Фото 4"></div>
+            <div class="slide"><img src="img5.jpg" alt="Фото 5"></div>
+            <div class="slide"><img src="img6.jpg" alt="Фото 6"></div>
+            <div class="slide"><img src="img7.jpg" alt="Фото 7"></div>
+            <div class="slide"><img src="img8.jpg" alt="Фото 8"></div>
+            <div class="slide"><img src="img9.jpg" alt="Фото 9"></div>
+            <div class="slide"><img src="img10.jpg" alt="Фото 10"></div>
+            <div class="slide"><img src="img11.jpg" alt="Фото 11"></div>
+            <div class="slide"><img src="img12.jpg" alt="Фото 12"></div>
+            <div class="slide"><img src="img13.jpg" alt="Фото 13"></div>
+            <div class="slide"><img src="img14.jpg" alt="Фото 14"></div>
+            <div class="slide"><img src="img15.jpg" alt="Фото 15"></div>
+            <div class="slide"><img src="img16.jpg" alt="Фото 16"></div>
+            <div class="slide"><img src="img17.jpg" alt="Фото 17"></div>
+            <div class="slide"><img src="img18.jpg" alt="Фото 18"></div>
+            <div class="slide"><img src="img19.jpg" alt="Фото 19"></div>
+            <div class="slide"><img src="img20.jpg" alt="Фото 20"></div>
+            <div class="slide"><img src="img21.jpg" alt="Фото 21"></div>
+            <div class="slide"><img src="img22.jpg" alt="Фото 22"></div>
+            <div class="slide"><img src="img23.jpg" alt="Фото 23"></div>
+            <div class="slide"><img src="img24.jpg" alt="Фото 24"></div>
+            <div class="slide"><img src="img25.jpg" alt="Фото 25"></div>
+            <div class="slide"><img src="img26.jpg" alt="Фото 26"></div>
+            <div class="slide"><img src="img27.jpg" alt="Фото 27"></div>
+            <div class="slide"><img src="img28.jpg" alt="Фото 28"></div>
+            <div class="slide"><img src="img29.jpg" alt="Фото 29"></div>
+            <div class="slide"><img src="img30.jpg" alt="Фото 30"></div>
+            <div class="slide"><img src="img31.jpg" alt="Фото 31"></div>
+            <div class="slide"><img src="img32.jpg" alt="Фото 32"></div>
+            <div class="slide"><img src="img33.jpg" alt="Фото 33"></div>
+            <div class="slide"><img src="img34.jpg" alt="Фото 34"></div>
+            <div class="slide"><img src="img35.jpg" alt="Фото 35"></div>
+            <div class="slide"><img src="img36.jpg" alt="Фото 36"></div>
+            <div class="slide"><img src="img37.jpg" alt="Фото 37"></div>
+            <div class="slide"><img src="img38.jpg" alt="Фото 38"></div>
+            <div class="slide"><img src="img39.jpg" alt="Фото 39"></div>
+            <div class="slide"><img src="img40.jpg" alt="Фото 40"></div>
+            <div class="slide"><img src="img41.jpg" alt="Фото 41"></div>
+            <div class="slide"><img src="img42.jpg" alt="Фото 42"></div>
+            <div class="slide"><img src="img43.jpg" alt="Фото 43"></div>
+        </div>
+        
+        <div id="message">
+            Мы разъезжаемся по разным городам, но наша дружба останется навсегда. До скорой встречи!
+        </div>
+    </div>
+    <div id="audio-player">
+        <audio id="backgroundAudio" loop>
+            <source src="C:/Users/latip/Desktop/statici.mages/background_music.mp3.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
+    </div>
+
+    <script>
+        let slides = document.getElementsByClassName("slide");
+        let slideIndex = 0;
+
+        function showRandomSlide() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex = Math.floor(Math.random() * slides.length);
+            slides[slideIndex].style.display = "block";
+            setTimeout(showRandomSlide, 5000); // Меняет слайд каждые 5 секунд
+        }
+
+        function startMusic() {
+            var audio = document.getElementById("backgroundAudio");
+            audio.play();
+            document.getElementById("musicPrompt").style.display = "none";
+            showRandomSlide(); // Начинаем показ слайдов
+        }
+    </script>
+</body>
+</html>
